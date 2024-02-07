@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>index 5</title>
+    <style>
+        body {
+           
+           
+            color: white; 
+            font-family: Arial, sans-serif;        
+         }
+        .main-heading {
+            font-weight: normal; 
+            color:  white; 
+            margin-right: 350px;
+            font-size: 30px;
+        }
+
+        .main-heading strong {
+            font-weight: bold; 
+                font-size: 30px;
+        }
+
+        .image-container {
+            display: flex; 
+            align-items: center; 
+            margin-left: 100px;
+        }
+
+        .circle-image {
+            width: 100px; 
+            height: 100px; 
+            border-radius: 50%; 
+            margin-right: 20px; 
+            border: 2px solid #00CA70; 
+        }
+        .explore-text {
+            font-size: 50px; 
+            margin-top: 10px; 
+            text-align: right; 
+            flex-grow: 1;
+            margin-right: 500px;
+        }
+        .square-image {
+            width: 140px;
+            height: 140px;
+            margin-right: 50px;
+            border-radius: 10px;
+            position: relative;
+        }
+       .explore-textlast{
+        font-size: 70px; 
+            margin-top: 30px; 
+            text-align: right; 
+            flex-grow: 1;
+            margin-right: 650px;
+       }
+       .background-image {
+            background-image: url('background.jpeg'); 
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 500px; 
+            display: flex;
+            align-items: flex-end; 
+            justify-content: center;
+            color: white; 
+            padding-bottom: 20px; 
+        }
+
+        .text-overlay {
+            position: absolute; 
+            top: 50%; 
+            color: white; 
+            font-size: 24px; 
+            font-weight: bold;
+            width: 100%; 
+            text-align: center; 
+            transform: translateY(-50%); 
+        }
+
+        .text-overlay.left {
+            left: 20px; 
+            text-align: left; 
+        }
+
+        .text-overlay.center {
+            left: 50%; 
+            transform: translateX(-50%) translateY(-50%); 
+            display: flex;
+            flex-direction: column; 
+            align-items: center; 
+        }
+
+        .text-overlay.right {
+            right: 20px; 
+            text-align: right; 
+        }
+
+        .book-button {
+            /* background-color: #00CA70; */
+            background: rgb(173,233,216);
+            background: linear-gradient(90deg, rgba(173,233,216,1) 0%, rgba(78,192,108,1) 50%, rgba(173,233,216,1) 100%);
+            color: white;
+            border: none;
+            padding: 10px 40px;
+            font-size: 20px;
+            border-radius: 30px;
+            cursor: pointer;
+            font-weight: bold;
+           
+        }
+
+
+        .section-container {
+            margin-top: 20px; 
+            display: flex;
+            justify-content: center; 
+        }
+
+        .row-images {
+            display: flex;
+            justify-content: space-between; 
+            margin-top: 50px;
+        }
+
+        .row-images img {
+            width: 400px; 
+            height: 495px; 
+            margin: 0 10px; 
+            border-radius: 15px;
+            transition: transform 0.3s ease;
+        }
+
+        .row-images img:hover {
+            transform: scale(1.1);
+        }
+
+        .row-images img:nth-child(1) {
+            margin-right: 150px; 
+        }
+
+        .row-images img:nth-child(2) {
+            margin: 0 auto; 
+        }
+
+        .row-images img:nth-child(3) {
+            margin-left: 150px; 
+        }
+
+        .background-image1 {
+            position: relative;
+            background-image: url('pink.jpeg'); 
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 250px; 
+            display: flex;
+            align-items: flex-end; 
+            justify-content: center;
+            color: white; 
+            padding-bottom: 20px; 
+        }
+
+        .image-text {
+            position: absolute;
+            top: 10px; 
+            left: 50%; 
+            transform: translateX(-50%); 
+            padding: 5px 6px; 
+            border-radius: 5px;
+            font-size: 14px;
+            display: block; 
+            color: #001A4C;
+            margin-top: 95px;
+            margin-right: 10px;
+        }
+
+        .row {
+            display: flex;
+        }
+
+        .square-image-container {
+            position: relative;
+            margin: 10px; 
+        }
+
+        .background-image2 {
+            position: relative;
+            background-image: url('kerla.jpeg'); 
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 900px; 
+            display: flex;
+            align-items: flex-end; 
+            justify-content: center;
+            color: white; 
+            padding-bottom: 20px; 
+        }
+        .logo {
+            position: absolute; 
+            top: 10px; 
+            left: 10px; 
+            width: 800px; 
+            z-index: 999; 
+        }
+        .background-image3{
+            background-image: url('bg-blue.png');
+            height: 700px;
+        }
+
+        header {
+          /*   background-color:  #324477; */
+            padding: 20px ;
+            position: absolute;
+            top:0;
+            right:0;
+        }
+
+.nav-links {
+    list-style: none;
+    margin: 25px;
+    padding: 0;
+    text-align: right;
+}
+
+.nav-links li {
+    display: inline-block;
+    margin-left: 80px;
+}
+
+.nav-links li:last-child {
+    margin-right: 0; 
+}
+
+.nav-links li a {
+    color: white;
+    text-decoration: none;
+    font-size: 35px;
+}
+
+.nav-links li a:hover {
+    color: #00CA70;
+}
+
+.button-button{
+            background: rgb(173,233,216);
+            background: linear-gradient(90deg, rgba(173,233,216,1) 0%, rgba(78,192,108,1) 50%, rgba(173,233,216,1) 100%);
+            /* background-color: #00CA70; */
+            color: white;
+            border: none;
+            padding: 15px 45px;
+            font-size: 24px;
+            border-radius: 30px;
+            cursor: pointer;
+            font-weight: bold;
+            margin-bottom: 200px;
+            margin-left:650px;
+}
+    </style>
+</head>
+<body>
+    <img src="removebg-preview.png" alt="Your Logo" class="logo">
+    <section class="background-image2">
+        <header class="header">
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#" class="active">Home</a></li>
+                    <li><a href="#">Packages</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </nav>
+        </header>
+       <button class="button-button">Book today</button>
+    </section>
+<div class="background-image3">
+
+    <section >
+        <div class="image-container">
+            <h2 class="main-heading">We have <strong>something</strong> <br> for <strong>everyone</strong></h2>
+            <!-- Circle images -->
+            <img src="circle1.png" alt="Circle Image 1" class="circle-image">
+            <img src="circle2.png" alt="Circle Image 2" class="circle-image">
+            <img src="circle3.png" alt="Circle Image 3" class="circle-image">
+            <img src="circle4.png" alt="Circle Image 4" class="circle-image">
+        </div>
+        <p class="explore-text">Explore</p>
+    </section>
+
+    <section class="section-container">
+        <div class="row">
+            
+            <div class="square-image-container">
+                <img src="img 1.jpeg" alt="Square Image 1" class="square-image">
+                <div class="image-text">Kerala</div>
+            </div>
+            <div class="square-image-container">
+                <img src="img 2.jpeg" alt="Square Image 2" class="square-image">
+                <div class="image-text">Tamil Nadu</div>
+            </div>
+            <div class="square-image-container">
+                <img src="img 3.jpeg" alt="Square Image 3" class="square-image">
+                <div class="image-text">Karnatka</div>
+            </div>
+            <div class="square-image-container">
+                <img src="img 4.jpeg" alt="Square Image 4" class="square-image">
+                <div class="image-text">Andhra Pradesh</div>
+            </div>
+        </div>
+    </section>
+
+    
+    <section class="section-container">
+        <div class="row">
+           
+            <div class="square-image-container">
+                <img src="img 5.jpeg" alt="Square Image 5" class="square-image">
+                <div class="image-text">Himachal Pradesh</div>
+            </div>
+            <div class="square-image-container">
+                <img src="img 6.jpeg" alt="Square Image 6" class="square-image">
+                <div class="image-text">Rajasthan</div>
+            </div>
+            <div class="square-image-container">
+                <img src="img 7.jpeg" alt="Square Image 7" class="square-image">
+                <div class="image-text">Uttar Pradesh</div>
+            </div>
+            <div class="square-image-container">
+                <img src="img 8.jpeg" alt="Square Image 8" class="square-image">
+                <div class="image-text">Goa</div>
+            </div>
+        </div>
+    </section>
+
+    <p class="explore-textlast">Explore our Packages</p>
+</div>
+    <div class="background-image">
+        <div class="row-images">
+            <img src="img p 1.jpeg" alt="Image 1">
+            <img src="img p 2.jpeg" alt="Image 2">
+            <img src="img p 3.jpeg" alt="Image 3">
+        </div>
+    </div>
+
+
+    <div class="background-image1">
+        <div class="text-overlay left">
+            Still scrolling?
+        </div>
+        <div class="text-overlay center">
+            Stop.
+        </div>
+        <div class="text-overlay right">
+            Plan your trip!
+        </div>
+        <button class="book-button">Book today</button>
+    </div>
+</body>
+</html>
